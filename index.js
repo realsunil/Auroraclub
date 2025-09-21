@@ -35,7 +35,7 @@ const client = new Client({
 });
 
 // Ticket category where ticket channels will be created.
-const TICKET_CATEGORY_ID = "1389286690178203758"; // <- adjust if you change categories
+const TICKET_CATEGORY_ID = ""; // <- adjust if you change categories
 
 // Collection that stores command modules (loaded dynamically)
 client.commands = new Collection();
@@ -76,7 +76,7 @@ client.on("messageCreate", async (message) => {
 
   // ─── DM Logging ───────────────────────────────────────────────────────────
   if (message.channel.type === ChannelType.DM) {
-    const logChannelId = "1377865584850505758"; // DM log channel in your guild
+    const logChannelId = ""; // DM log channel in your guild
     const logChannel = client.channels.cache.get(logChannelId);
     if (logChannel) {
       const embed = new EmbedBuilder()
@@ -215,3 +215,4 @@ client.on("interactionCreate", async (interaction) => {
 // Log in to Discord
 // ─────────────────────────────────────────────────────────────────────────────
 client.login(process.env.BOT_TOKEN);
+
